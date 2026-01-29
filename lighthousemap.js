@@ -21,7 +21,7 @@ function resolveColor(color) {
 }
 
 // --- State ---
-var lights = [];       // Array of {lng, lat, sequence, name, range}
+var lights = [];       // Array of {lng, lat, sequence, name, range, osmType, osmId}
 var spatialGrid = {};  // Grid-based spatial index
 var GRID_SIZE = 1;     // 1 degree cells
 var useRealColors = true;
@@ -141,6 +141,13 @@ function processElements(elements) {
 			continue;
 		}
 
+		// Snapshot original tag keys before LightSequence.parse mutates el.tags
+		// (renameProperty copies seamark:light:1:* to seamark:light:*)
+		var originalKeys = {};
+		for (var key in el.tags) {
+			originalKeys[key] = true;
+		}
+
 		var sequence;
 		try {
 			sequence = LightSequence.parse(el.tags, '#FF0');
@@ -153,12 +160,24 @@ function processElements(elements) {
 			}
 		}
 
+		// Extract seamark:* tags for popup display, skipping keys
+		// that were added by LightSequence.parse (not in original OSM data)
+		var seamarkTags = {};
+		for (var key in el.tags) {
+			if (key.indexOf('seamark:') === 0 && originalKeys[key]) {
+				seamarkTags[key] = el.tags[key];
+			}
+		}
+
 		lights.push({
 			lng: lng,
 			lat: lat,
 			sequence: sequence,
 			name: el.tags['name'] || el.tags['seamark:name'] || '',
-			range: parseFloat(el.tags['seamark:light:range']) || 1
+			range: parseFloat(el.tags['seamark:light:range']) || 1,
+			osmType: el.type,
+			osmId: el.id,
+			seamarkTags: seamarkTags
 		});
 	}
 
@@ -316,6 +335,82 @@ function startAnimation() {
 
 	requestAnimationFrame(draw);
 }
+
+// --- Click interaction ---
+var activePopup = null;
+
+function findNearestLight(point) {
+	var visible = getVisibleLights();
+	var isGlobe = map.getProjection().type === 'globe';
+	var offsets = isGlobe ? [0] : getWorldOffsets();
+	var best = null;
+	var bestDist = Infinity;
+	var maxDist = 20; // pixels
+
+	for (var i = 0; i < visible.length; i++) {
+		var light = visible[i];
+
+		if (isGlobe && map.transform.isLocationOccluded(new maplibregl.LngLat(light.lng, light.lat))) continue;
+
+		for (var oi = 0; oi < offsets.length; oi++) {
+			var projected = map.project([light.lng + offsets[oi], light.lat]);
+			var dx = projected.x - point.x;
+			var dy = projected.y - point.y;
+			var dist = Math.sqrt(dx * dx + dy * dy);
+			if (dist < bestDist && dist <= maxDist) {
+				bestDist = dist;
+				best = light;
+			}
+		}
+	}
+
+	return best;
+}
+
+map.on('click', function(e) {
+	if (activePopup) {
+		activePopup.remove();
+		activePopup = null;
+	}
+
+	var light = findNearestLight(e.point);
+	if (!light) return;
+
+	var osmUrl = 'https://www.openstreetmap.org/' + light.osmType + '/' + light.osmId;
+
+	var html = '<div style="font:12px/1.4 monospace;max-height:300px;overflow-y:auto;color:#000">';
+	if (light.name) {
+		html += '<div style="font-weight:bold;margin-bottom:4px">' + light.name + '</div>';
+	}
+
+	// Build sorted tag table
+	var keys = Object.keys(light.seamarkTags).sort();
+	if (keys.length > 0) {
+		html += '<table style="border-collapse:collapse;font-size:11px">';
+		for (var i = 0; i < keys.length; i++) {
+			var displayKey = keys[i].replace(/^seamark:/, '');
+			html += '<tr><td style="padding:1px 6px 1px 0;color:#666;white-space:nowrap;vertical-align:top">'
+				+ displayKey + '</td><td style="padding:1px 0">'
+				+ light.seamarkTags[keys[i]] + '</td></tr>';
+		}
+		html += '</table>';
+	}
+
+	html += '<div style="margin-top:4px"><a href="' + osmUrl + '" target="_blank" rel="noopener">'
+		+ 'View on OpenStreetMap</a></div>';
+	html += '</div>';
+
+	activePopup = new maplibregl.Popup({ closeButton: true, maxWidth: '350px' })
+		.setLngLat([light.lng, light.lat])
+		.setHTML(html)
+		.addTo(map);
+});
+
+// Change cursor when hovering near a light
+map.on('mousemove', function(e) {
+	var light = findNearestLight(e.point);
+	map.getCanvas().style.cursor = light ? 'pointer' : '';
+});
 
 // --- Controls ---
 var ICON_COLORS = "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29 29'%3E%3Ccircle cx='10' cy='10' r='4' fill='%23f00' stroke='%23000' stroke-width='.75'/%3E%3Ccircle cx='19' cy='10' r='4' fill='%230f0' stroke='%23000' stroke-width='.75'/%3E%3Ccircle cx='14.5' cy='18' r='4' fill='%23ffa500' stroke='%23000' stroke-width='.75'/%3E%3C/svg%3E";
