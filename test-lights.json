@@ -1,0 +1,76 @@
+{
+  "elements": [
+    {"type":"node","id":900001,"lat":-5,"lon":-160,"tags":{"name":"F (Fixed)","seamark:light:character":"F","seamark:light:colour":"white","seamark:light:range":"10"}},
+
+    {"type":"node","id":900002,"lat":-5,"lon":-155,"tags":{"name":"Fl (Flash, period=5)","seamark:light:character":"Fl","seamark:light:period":"5","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900003,"lat":-5,"lon":-150,"tags":{"name":"Fl(3) (Group Flash, period=10)","seamark:light:character":"Fl","seamark:light:group":"3","seamark:light:period":"10","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900004,"lat":-5,"lon":-145,"tags":{"name":"Fl (Flash, explicit seq)","seamark:light:character":"Fl","seamark:light:sequence":"1.0+(4.0)","seamark:light:colour":"red","seamark:light:range":"10"}},
+
+    {"type":"node","id":900005,"lat":-10,"lon":-160,"tags":{"name":"LFl (Long Flash, period=10)","seamark:light:character":"LFl","seamark:light:period":"10","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900006,"lat":-10,"lon":-155,"tags":{"name":"LFl(2) (Group Long Flash, period=15)","seamark:light:character":"LFl","seamark:light:group":"2","seamark:light:period":"15","seamark:light:colour":"white","seamark:light:range":"10"}},
+
+    {"type":"node","id":900007,"lat":-10,"lon":-150,"tags":{"name":"Oc (Occulting, period=6)","seamark:light:character":"Oc","seamark:light:period":"6","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900008,"lat":-10,"lon":-145,"tags":{"name":"Oc(2) (Group Occulting, period=10)","seamark:light:character":"Oc","seamark:light:group":"2","seamark:light:period":"10","seamark:light:colour":"red","seamark:light:range":"10"}},
+    {"type":"node","id":900009,"lat":-10,"lon":-140,"tags":{"name":"Oc (Occulting, explicit seq)","seamark:light:character":"Oc","seamark:light:sequence":"4.5+(0.5)","seamark:light:colour":"green","seamark:light:range":"10"}},
+
+    {"type":"node","id":900010,"lat":-15,"lon":-160,"tags":{"name":"Iso (Isophase, period=4)","seamark:light:character":"Iso","seamark:light:period":"4","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900011,"lat":-15,"lon":-155,"tags":{"name":"Iso (Isophase, explicit seq)","seamark:light:character":"Iso","seamark:light:sequence":"3+(3)","seamark:light:colour":"green","seamark:light:range":"10"}},
+
+    {"type":"node","id":900012,"lat":-15,"lon":-150,"tags":{"name":"Q (Quick, period=2)","seamark:light:character":"Q","seamark:light:period":"2","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900013,"lat":-15,"lon":-145,"tags":{"name":"Q(3) (Group Quick, period=10)","seamark:light:character":"Q","seamark:light:group":"3","seamark:light:period":"10","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900014,"lat":-15,"lon":-140,"tags":{"name":"Q (Quick, explicit seq)","seamark:light:character":"Q","seamark:light:sequence":"0.25+(0.25)+0.25+(0.25)+0.25+(4.75)","seamark:light:colour":"yellow","seamark:light:range":"10"}},
+
+    {"type":"node","id":900015,"lat":-20,"lon":-160,"tags":{"name":"VQ (Very Quick, period=5)","seamark:light:character":"VQ","seamark:light:period":"5","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900016,"lat":-20,"lon":-155,"tags":{"name":"VQ(3) (Group VQ, period=5)","seamark:light:character":"VQ","seamark:light:group":"3","seamark:light:period":"5","seamark:light:colour":"white","seamark:light:range":"10"}},
+
+    {"type":"node","id":900017,"lat":-20,"lon":-150,"tags":{"name":"UQ (Ultra Quick, period=4)","seamark:light:character":"UQ","seamark:light:period":"4","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900018,"lat":-20,"lon":-145,"tags":{"name":"UQ(3) (Group UQ, period=4)","seamark:light:character":"UQ","seamark:light:group":"3","seamark:light:period":"4","seamark:light:colour":"white","seamark:light:range":"10"}},
+
+    {"type":"node","id":900019,"lat":-25,"lon":-160,"tags":{"name":"IQ (Interrupted Quick, period=10)","seamark:light:character":"IQ","seamark:light:period":"10","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900020,"lat":-25,"lon":-155,"tags":{"name":"IVQ (Interrupted VQ, period=10)","seamark:light:character":"IVQ","seamark:light:period":"10","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900021,"lat":-25,"lon":-150,"tags":{"name":"IUQ (Interrupted UQ, period=10)","seamark:light:character":"IUQ","seamark:light:period":"10","seamark:light:colour":"white","seamark:light:range":"10"}},
+
+    {"type":"node","id":900022,"lat":-25,"lon":-145,"tags":{"name":"Q+LFl (Quick+Long Flash, period=15)","seamark:light:character":"Q+LFl","seamark:light:group":"6","seamark:light:period":"15","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900023,"lat":-25,"lon":-140,"tags":{"name":"VQ+LFl (VQ+Long Flash, period=15)","seamark:light:character":"VQ+LFl","seamark:light:group":"6","seamark:light:period":"15","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900024,"lat":-25,"lon":-135,"tags":{"name":"UQ+LFl (UQ+Long Flash, period=15)","seamark:light:character":"UQ+LFl","seamark:light:group":"6","seamark:light:period":"15","seamark:light:colour":"white","seamark:light:range":"10"}},
+
+    {"type":"node","id":900025,"lat":-30,"lon":-160,"tags":{"name":"Mo(A) (Morse A, explicit seq)","seamark:light:character":"Mo","seamark:light:sequence":"0.5+(0.5)+1.5+(3.5)","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900026,"lat":-30,"lon":-155,"tags":{"name":"Mo(U) (Morse U, explicit seq)","seamark:light:character":"Mo","seamark:light:sequence":"0.5+(0.5)+0.5+(0.5)+1.5+(5.0)","seamark:light:colour":"white","seamark:light:range":"10"}},
+
+    {"type":"node","id":900027,"lat":-30,"lon":-150,"tags":{"name":"Al.Fl (Alternating Flash, W/R)","seamark:light:character":"Al.Fl","seamark:light:sequence":"0.5+(4.5),0.5+(4.5)","seamark:light:colour":"white;red","seamark:light:range":"10"}},
+    {"type":"node","id":900028,"lat":-30,"lon":-145,"tags":{"name":"Al.Oc (Alternating Occulting, W/R)","seamark:light:character":"Al.Oc","seamark:light:sequence":"4.5+(0.5),4.5+(0.5)","seamark:light:colour":"white;red","seamark:light:range":"10"}},
+    {"type":"node","id":900029,"lat":-30,"lon":-140,"tags":{"name":"Al.Iso (Alternating Isophase, W/G)","seamark:light:character":"Al.Iso","seamark:light:sequence":"2+(2),2+(2)","seamark:light:colour":"white;green","seamark:light:range":"10"}},
+    {"type":"node","id":900030,"lat":-30,"lon":-135,"tags":{"name":"Al.LFl (Alt Long Flash, W/R)","seamark:light:character":"Al.LFl","seamark:light:sequence":"2+(3),2+(3)","seamark:light:colour":"white;red","seamark:light:range":"10"}},
+
+    {"type":"node","id":900031,"lat":-35,"lon":-160,"tags":{"name":"FFl (Fixed and Flash)","seamark:light:character":"FFl","seamark:light:sequence":"0.5","seamark:light:period":"10","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900032,"lat":-35,"lon":-155,"tags":{"name":"FLFl (Fixed/Long Flash)","seamark:light:character":"FLFl","seamark:light:sequence":"2.0+(3.0)+0.5+(4.5)","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900033,"lat":-35,"lon":-150,"tags":{"name":"OcFl (Occulting/Flash)","seamark:light:character":"OcFl","seamark:light:sequence":"3.0+(1.0)+0.5+(5.5)","seamark:light:colour":"white","seamark:light:range":"10"}},
+
+    {"type":"node","id":900034,"lat":-35,"lon":-145,"tags":{"name":"Al (bare Alternating, W/R, seq)","seamark:light:character":"Al","seamark:light:sequence":"1.0+(1.0),1.0+(1.0)","seamark:light:colour":"white;red","seamark:light:range":"10"}},
+    {"type":"node","id":900035,"lat":-35,"lon":-140,"tags":{"name":"Al (bare Alternating, no seq)","seamark:light:character":"Al","seamark:light:colour":"white;red","seamark:light:range":"10"}},
+
+    {"type":"node","id":900036,"lat":-5,"lon":-140,"tags":{"name":"Fl (Red)","seamark:light:character":"Fl","seamark:light:period":"4","seamark:light:colour":"red","seamark:light:range":"10"}},
+    {"type":"node","id":900037,"lat":-5,"lon":-135,"tags":{"name":"Fl (Green)","seamark:light:character":"Fl","seamark:light:period":"4","seamark:light:colour":"green","seamark:light:range":"10"}},
+    {"type":"node","id":900038,"lat":-5,"lon":-130,"tags":{"name":"Fl (Yellow)","seamark:light:character":"Fl","seamark:light:period":"4","seamark:light:colour":"yellow","seamark:light:range":"10"}},
+    {"type":"node","id":900039,"lat":-5,"lon":-125,"tags":{"name":"Fl (Orange)","seamark:light:character":"Fl","seamark:light:period":"4","seamark:light:colour":"orange","seamark:light:range":"10"}},
+    {"type":"node","id":900040,"lat":-5,"lon":-120,"tags":{"name":"Fl (Blue)","seamark:light:character":"Fl","seamark:light:period":"4","seamark:light:colour":"blue","seamark:light:range":"10"}},
+    {"type":"node","id":900041,"lat":-5,"lon":-115,"tags":{"name":"Fl (Violet)","seamark:light:character":"Fl","seamark:light:period":"4","seamark:light:colour":"violet","seamark:light:range":"10"}},
+    {"type":"node","id":900042,"lat":-5,"lon":-110,"tags":{"name":"Fl (Amber)","seamark:light:character":"Fl","seamark:light:period":"4","seamark:light:colour":"amber","seamark:light:range":"10"}},
+
+    {"type":"node","id":900043,"lat":-35,"lon":-135,"tags":{"name":"Al.Fl (W/R/G, 3 colors)","seamark:light:character":"Al.Fl","seamark:light:sequence":"0.5+(2.5),0.5+(2.5),0.5+(2.5)","seamark:light:colour":"white;red;green","seamark:light:range":"10"}},
+
+    {"type":"node","id":900044,"lat":-20,"lon":-140,"tags":{"name":"Q+LFl (explicit seq)","seamark:light:character":"Q+LFl","seamark:light:sequence":"0.2+(0.2)+0.2+(0.2)+0.2+(0.2)+2.0+(6.8)","seamark:light:colour":"white","seamark:light:range":"10"}},
+
+    {"type":"node","id":900045,"lat":-40,"lon":-160,"tags":{"name":"Fl(2) (Group 2, period=6)","seamark:light:character":"Fl","seamark:light:group":"2","seamark:light:period":"6","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900046,"lat":-40,"lon":-155,"tags":{"name":"Fl(4) (Group 4, period=12)","seamark:light:character":"Fl","seamark:light:group":"4","seamark:light:period":"12","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900047,"lat":-40,"lon":-150,"tags":{"name":"Oc(3) (Group 3 Occ, period=12)","seamark:light:character":"Oc","seamark:light:group":"3","seamark:light:period":"12","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900048,"lat":-40,"lon":-145,"tags":{"name":"Q(9)+LFl (9 quick + long, period=15)","seamark:light:character":"Q+LFl","seamark:light:group":"9","seamark:light:period":"15","seamark:light:colour":"white","seamark:light:range":"10"}},
+
+    {"type":"node","id":900049,"lat":-45,"lon":-160,"tags":{"name":"Mo(A) synth (.- period=8)","seamark:light:character":"Mo(A)","seamark:light:period":"8","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900050,"lat":-45,"lon":-155,"tags":{"name":"Mo(S) synth (...  period=8)","seamark:light:character":"Mo(S)","seamark:light:period":"8","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900051,"lat":-45,"lon":-150,"tags":{"name":"Mo(K) synth (-.- period=10)","seamark:light:character":"Mo(K)","seamark:light:period":"10","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900052,"lat":-45,"lon":-145,"tags":{"name":"Mo(U) synth (..- period=10)","seamark:light:character":"Mo(U)","seamark:light:period":"10","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900053,"lat":-45,"lon":-140,"tags":{"name":"Mo group=B synth (-... period=12)","seamark:light:character":"Mo","seamark:light:group":"B","seamark:light:period":"12","seamark:light:colour":"white","seamark:light:range":"10"}},
+    {"type":"node","id":900054,"lat":-45,"lon":-135,"tags":{"name":"Mo(T) synth (- period=6)","seamark:light:character":"Mo(T)","seamark:light:period":"6","seamark:light:colour":"white","seamark:light:range":"10"}}
+  ]
+}

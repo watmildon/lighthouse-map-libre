@@ -7,6 +7,19 @@
 
 window.LightSequence = {};
 
+// ITU Morse code: '.' = dot, '-' = dash
+LightSequence.MORSE = {
+	'A': '.-',    'B': '-...',  'C': '-.-.',  'D': '-..',
+	'E': '.',     'F': '..-.',  'G': '--.',   'H': '....',
+	'I': '..',    'J': '.---',  'K': '-.-',   'L': '.-..',
+	'M': '--',    'N': '-.',    'O': '---',   'P': '.--.',
+	'Q': '--.-',  'R': '.-.',   'S': '...',   'T': '-',
+	'U': '..-',   'V': '...-',  'W': '.--',   'X': '-..-',
+	'Y': '-.--',  'Z': '--..',
+	'0': '-----', '1': '.----', '2': '..---', '3': '...--', '4': '....-',
+	'5': '.....', '6': '-....', '7': '--...', '8': '---..', '9': '----.'
+};
+
 LightSequence.parse = function(tags, fallbackColor = '#FF0') {
 	renameProperty = function(tags, property) {
 		old_key = 'seamark:light:1:' + property
@@ -44,6 +57,20 @@ LightSequence.parse = function(tags, fallbackColor = '#FF0') {
 		.replace(/^AlFl$/, 'Al.Fl')  // missing dot
 		.replace(/^AlQ$/, 'Al.Q')    // missing dot
 		.replace(/^W$/, 'Fl');       // bare color used as character
+
+	// Extract Morse letter from Mo(X) character and normalize to 'Mo'
+	// The letter is also sometimes in seamark:light:group (e.g. group=A)
+	let morseLetter = null;
+	let moMatch = character.match(/^Mo\(([A-Za-z0-9]+)\)$/);
+	if (moMatch) {
+		morseLetter = moMatch[1].toUpperCase();
+		character = 'Mo';
+	} else if (character === 'Mo') {
+		let group = tags['seamark:light:group'];
+		if (group && group.match(/^[A-Za-z0-9]+$/)) {
+			morseLetter = group.toUpperCase();
+		}
+	}
 
 	let colors = (tags['seamark:light:colour'] || fallbackColor).split(';');
 
@@ -135,6 +162,29 @@ LightSequence.parse = function(tags, fallbackColor = '#FF0') {
 				sequence = Array(group).fill(flash + '+(' + gap + ')').join('+') + '+' + longflash + '+(' + Math.max(0.5, gap) + ')';
 			}
 			character = 'Fl';
+		} else if (character == 'Mo' && morseLetter) {
+			// Synthesize Morse code sequence from letter
+			// ITU timing: dot=1 unit, dash=3 units, intra-char gap=1 unit, word gap=remainder
+			const morsePattern = LightSequence.MORSE[morseLetter];
+			if (morsePattern) {
+				const unit = 0.3;
+				const parts = [];
+				for (let ci = 0; ci < morsePattern.length; ci++) {
+					const on = morsePattern[ci] === '.' ? unit : unit * 3;
+					parts.push(on);
+					if (ci < morsePattern.length - 1) {
+						parts.push('(' + unit + ')'); // intra-character gap
+					}
+				}
+				// Calculate time used by dots/dashes + intra-char gaps
+				const activeTime = parts.reduce(function(sum, p) {
+					if (typeof p === 'string') return sum + parseFloat(p.replace(/[()]/g, ''));
+					return sum + p;
+				}, 0);
+				const remainder = Math.max(unit * 3, period - activeTime);
+				parts.push('(' + remainder + ')');
+				sequence = parts.join('+');
+			}
 		}
 	}
 
@@ -238,6 +288,13 @@ LightSequence.parse = function(tags, fallbackColor = '#FF0') {
 			return new LightSequence.Fixed(colors[0]);
 
 		case 'Iso':
+			if (sequence.includes(',')) {
+				// Comma-separated subsequences (e.g. Al.Iso with per-color sequences)
+				const isoSeqs = sequence.split(',').map((seq, i) => {
+					return new LightSequence.Sequence(seq, colors[i % colors.length]);
+				});
+				return new LightSequence.CombinedSequence(isoSeqs);
+			}
 			return new LightSequence.CombinedSequence(colors.map(color => {
 				return new LightSequence.Sequence(sequence, color);
 			}));

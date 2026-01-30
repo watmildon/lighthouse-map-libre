@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Light Character Test Page</title>
+		<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.17.0/dist/maplibre-gl.css" />
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				font: 14px/1.4 sans-serif;
+				color: white;
+				background: #000010;
+			}
+
+			#map {
+				width: 100%;
+				height: 100%;
+			}
+
+			#legend {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				background: rgba(0, 0, 16, 0.85);
+				padding: 12px 16px;
+				border-radius: 6px;
+				z-index: 100;
+				max-height: 90vh;
+				overflow-y: auto;
+				font-size: 12px;
+				line-height: 1.6;
+				min-width: 200px;
+			}
+
+			#legend h3 {
+				margin: 0 0 8px;
+				font-size: 14px;
+			}
+
+			#legend .row-group {
+				margin-bottom: 6px;
+				padding-bottom: 6px;
+				border-bottom: 1px solid rgba(255,255,255,0.1);
+			}
+
+			#legend .row-group:last-child {
+				border-bottom: none;
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+
+			#legend .row-label {
+				font-weight: bold;
+				color: #ffe066;
+			}
+
+			#error-log {
+				position: absolute;
+				bottom: 10px;
+				left: 10px;
+				right: 10px;
+				background: rgba(80, 0, 0, 0.9);
+				padding: 12px;
+				border-radius: 6px;
+				z-index: 100;
+				max-height: 30vh;
+				overflow-y: auto;
+				font: 12px/1.5 monospace;
+				display: none;
+			}
+
+			#error-log .error-entry {
+				margin-bottom: 4px;
+				color: #ff8888;
+			}
+
+			#stats {
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+				background: rgba(0, 0, 16, 0.85);
+				padding: 8px 12px;
+				border-radius: 6px;
+				z-index: 100;
+				font-size: 12px;
+			}
+
+			.label-marker {
+				color: #ccc;
+				font: 11px/1.2 monospace;
+				white-space: nowrap;
+				text-shadow: 0 0 4px #000, 0 0 8px #000;
+				pointer-events: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="map"></div>
+		<div id="legend">
+			<h3>Character Type Test Grid</h3>
+			<div class="row-group"><span class="row-label">Row -5°:</span> F, Fl, Fl(3), Fl seq, colors (R/G/Y/O/B/V/A)</div>
+			<div class="row-group"><span class="row-label">Row -10°:</span> LFl, LFl(2), Oc, Oc(2), Oc seq</div>
+			<div class="row-group"><span class="row-label">Row -15°:</span> Iso, Iso seq, Q, Q(3), Q seq</div>
+			<div class="row-group"><span class="row-label">Row -20°:</span> VQ, VQ(3), UQ, UQ(3), Q+LFl seq</div>
+			<div class="row-group"><span class="row-label">Row -25°:</span> IQ, IVQ, IUQ, Q+LFl, VQ+LFl, UQ+LFl</div>
+			<div class="row-group"><span class="row-label">Row -30°:</span> Mo(A), Mo(U), Al.Fl, Al.Oc, Al.Iso, Al.LFl</div>
+			<div class="row-group"><span class="row-label">Row -35°:</span> FFl, FLFl, OcFl, Al bare, Al fixed, Al.Fl 3-color</div>
+			<div class="row-group"><span class="row-label">Row -40°:</span> Fl(2), Fl(4), Oc(3), Q(9)+LFl</div>
+			<div class="row-group"><span class="row-label">Row -45°:</span> Mo synth: A(.-), S(...), K(-.-), U(..-), B(-...) via group, T(-)</div>
+		</div>
+		<div id="error-log"></div>
+		<div id="stats"></div>
+
+		<script src="https://unpkg.com/maplibre-gl@5.17.0/dist/maplibre-gl.js"></script>
+		<script src="light.js"></script>
+		<script>
+			// --- Color mapping (from lighthousemap.js) ---
+			var COLOR_MAP = {
+				'white': '#FFFFFF',
+				'red': '#FF0000',
+				'green': '#00FF00',
+				'yellow': '#FFFF00',
+				'blue': '#0000FF',
+				'orange': '#FFA500',
+				'violet': '#EE82EE',
+				'amber': '#FFBF00'
+			};
+
+			function resolveColor(color) {
+				if (!color) return false;
+				if (color === true) return '#FFFF00';
+				var lower = color.toLowerCase();
+				return COLOR_MAP[lower] || color;
+			}
+
+			// --- State ---
+			var lights = [];
+			var overlayCanvas, overlayCtx;
+			var labels = [];
+			var errors = [];
+			var parsed = 0;
+
+			// --- Map ---
+			var map = new maplibregl.Map({
+				container: 'map',
+				style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
+				center: [-140, -22],
+				zoom: 4,
+				attributionControl: false
+			});
+
+			// --- Load test data ---
+			function loadTestData() {
+				return fetch('test-lights.json')
+					.then(function(r) { return r.json(); })
+					.then(function(data) {
+						parseElements(data.elements);
+					});
+			}
+
+			function parseElements(elements) {
+				for (var i = 0; i < elements.length; i++) {
+					var el = elements[i];
+					if (!el.tags) continue;
+
+					var hasSemLight = false;
+					for (var key in el.tags) {
+						if (key.indexOf('seamark:light') === 0) {
+							hasSemLight = true;
+							break;
+						}
+					}
+					if (!hasSemLight) continue;
+
+					var lat = el.lat;
+					var lng = el.lon;
+					var name = el.tags['name'] || el.tags['seamark:light:character'] || '?';
+
+					try {
+						var sequence = LightSequence.parse(el.tags);
+						// Disable random phase offset for testing — sync all lights
+						if (sequence.offset !== undefined) sequence.offset = 0;
+						if (sequence.sequences) {
+							sequence.sequences.forEach(function(s) { if (s.offset !== undefined) s.offset = 0; });
+						}
+						lights.push({
+							lng: lng,
+							lat: lat,
+							sequence: sequence,
+							name: name,
+							range: 10,
+							tags: el.tags
+						});
+						parsed++;
+					} catch (e) {
+						errors.push({ name: name, error: String(e), tags: el.tags });
+					}
+				}
+			}
+
+			// --- Canvas overlay ---
+			function setupCanvasOverlay() {
+				var container = map.getCanvasContainer();
+				overlayCanvas = document.createElement('canvas');
+				overlayCanvas.style.position = 'absolute';
+				overlayCanvas.style.top = '0';
+				overlayCanvas.style.left = '0';
+				overlayCanvas.style.pointerEvents = 'none';
+				container.appendChild(overlayCanvas);
+				overlayCtx = overlayCanvas.getContext('2d');
+				resizeCanvas();
+			}
+
+			function resizeCanvas() {
+				var dpr = window.devicePixelRatio || 1;
+				var mapCanvas = map.getCanvas();
+				var width = mapCanvas.clientWidth;
+				var height = mapCanvas.clientHeight;
+				overlayCanvas.width = width * dpr;
+				overlayCanvas.height = height * dpr;
+				overlayCanvas.style.width = width + 'px';
+				overlayCanvas.style.height = height + 'px';
+				overlayCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+			}
+
+			// --- Rendering ---
+			function startAnimation() {
+				function draw(timestamp) {
+					var t = timestamp / 1000;
+					var dpr = window.devicePixelRatio || 1;
+					var width = overlayCanvas.width / dpr;
+					var height = overlayCanvas.height / dpr;
+
+					overlayCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+					overlayCtx.clearRect(0, 0, width, height);
+
+					for (var i = 0; i < lights.length; i++) {
+						var light = lights[i];
+						var state = light.sequence.state(t);
+						var pos = map.project([light.lng, light.lat]);
+
+						if (pos.x < -20 || pos.x > width + 20 || pos.y < -20 || pos.y > height + 20) continue;
+
+						if (state) {
+							var color = resolveColor(state);
+							var radius = 6;
+
+							// Glow
+							overlayCtx.globalAlpha = 0.3;
+							overlayCtx.fillStyle = color;
+							overlayCtx.beginPath();
+							overlayCtx.arc(pos.x, pos.y, radius * 2.5, 0, 6.2832);
+							overlayCtx.fill();
+
+							// Core
+							overlayCtx.globalAlpha = 0.9;
+							overlayCtx.beginPath();
+							overlayCtx.arc(pos.x, pos.y, radius, 0, 6.2832);
+							overlayCtx.fill();
+						} else {
+							// Show a dim dot when off so you can see position
+							overlayCtx.globalAlpha = 0.15;
+							overlayCtx.fillStyle = '#888';
+							overlayCtx.beginPath();
+							overlayCtx.arc(pos.x, pos.y, 3, 0, 6.2832);
+							overlayCtx.fill();
+						}
+					}
+					overlayCtx.globalAlpha = 1.0;
+
+					requestAnimationFrame(draw);
+				}
+				requestAnimationFrame(draw);
+			}
+
+			// --- Labels ---
+			function addLabels() {
+				for (var i = 0; i < lights.length; i++) {
+					var light = lights[i];
+					var el = document.createElement('div');
+					el.className = 'label-marker';
+					el.textContent = light.name;
+
+					new maplibregl.Marker({ element: el, anchor: 'left', offset: [12, 0] })
+						.setLngLat([light.lng, light.lat])
+						.addTo(map);
+				}
+			}
+
+			// --- Click interaction ---
+			var activePopup = null;
+
+			function findNearestLight(point) {
+				var best = null;
+				var bestDist = Infinity;
+				var maxDist = 20;
+
+				for (var i = 0; i < lights.length; i++) {
+					var projected = map.project([lights[i].lng, lights[i].lat]);
+					var dx = projected.x - point.x;
+					var dy = projected.y - point.y;
+					var dist = Math.sqrt(dx * dx + dy * dy);
+					if (dist < bestDist && dist <= maxDist) {
+						bestDist = dist;
+						best = lights[i];
+					}
+				}
+				return best;
+			}
+
+			map.on('click', function(e) {
+				if (activePopup) {
+					activePopup.remove();
+					activePopup = null;
+				}
+
+				var light = findNearestLight(e.point);
+				if (!light) return;
+
+				var html = '<div style="font:12px/1.4 monospace;max-height:300px;overflow-y:auto;color:#000">';
+				if (light.name) {
+					html += '<div style="font-weight:bold;margin-bottom:4px">' + light.name + '</div>';
+				}
+
+				var keys = Object.keys(light.tags).sort();
+				if (keys.length > 0) {
+					html += '<table style="border-collapse:collapse;font-size:11px">';
+					for (var i = 0; i < keys.length; i++) {
+						if (keys[i] === 'name') continue;
+						var displayKey = keys[i].replace(/^seamark:/, '');
+						html += '<tr><td style="padding:1px 6px 1px 0;color:#666;white-space:nowrap;vertical-align:top">'
+							+ displayKey + '</td><td style="padding:1px 0">'
+							+ light.tags[keys[i]] + '</td></tr>';
+					}
+					html += '</table>';
+				}
+				html += '</div>';
+
+				activePopup = new maplibregl.Popup({ closeButton: true, maxWidth: '350px' })
+					.setLngLat([light.lng, light.lat])
+					.setHTML(html)
+					.addTo(map);
+			});
+
+			map.on('mousemove', function(e) {
+				var light = findNearestLight(e.point);
+				map.getCanvas().style.cursor = light ? 'pointer' : '';
+			});
+
+			// --- Error display ---
+			function showErrors() {
+				var statsEl = document.getElementById('stats');
+				statsEl.textContent = 'Parsed: ' + parsed + ' / ' + (parsed + errors.length) + ' | Errors: ' + errors.length;
+
+				if (errors.length === 0) return;
+
+				var logEl = document.getElementById('error-log');
+				logEl.style.display = 'block';
+				for (var i = 0; i < errors.length; i++) {
+					var div = document.createElement('div');
+					div.className = 'error-entry';
+					div.textContent = errors[i].name + ': ' + errors[i].error;
+					logEl.appendChild(div);
+				}
+			}
+
+			// --- Init ---
+			map.on('load', function() {
+				setupCanvasOverlay();
+
+				loadTestData()
+					.then(function() {
+						addLabels();
+						showErrors();
+						startAnimation();
+					})
+					.catch(function(err) {
+						console.error('Failed to load test data:', err);
+					});
+			});
+
+			map.on('resize', function() {
+				if (overlayCanvas) resizeCanvas();
+			});
+		</script>
+	</body>
+</html>
