@@ -413,8 +413,8 @@ map.on('mousemove', function(e) {
 });
 
 // --- Controls ---
-var ICON_COLORS = "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29 29'%3E%3Ccircle cx='10' cy='10' r='4' fill='%23f00' stroke='%23000' stroke-width='.75'/%3E%3Ccircle cx='19' cy='10' r='4' fill='%230f0' stroke='%23000' stroke-width='.75'/%3E%3Ccircle cx='14.5' cy='18' r='4' fill='%23ffa500' stroke='%23000' stroke-width='.75'/%3E%3C/svg%3E";
-var ICON_YELLOW = "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29 29'%3E%3Ccircle cx='10' cy='10' r='4' fill='%23ff0' stroke='%23000' stroke-width='.75'/%3E%3Ccircle cx='19' cy='10' r='4' fill='%23ff0' stroke='%23000' stroke-width='.75'/%3E%3Ccircle cx='14.5' cy='18' r='4' fill='%23ff0' stroke='%23000' stroke-width='.75'/%3E%3C/svg%3E";
+var ICON_COLORS = "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29 29'%3E%3Ccircle cx='10' cy='11.5' r='4' fill='%23f00' stroke='%23000' stroke-width='.75'/%3E%3Ccircle cx='19' cy='11.5' r='4' fill='%230f0' stroke='%23000' stroke-width='.75'/%3E%3Ccircle cx='14.5' cy='19.5' r='4' fill='%23ffa500' stroke='%23000' stroke-width='.75'/%3E%3C/svg%3E";
+var ICON_YELLOW = "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29 29'%3E%3Ccircle cx='10' cy='11.5' r='4' fill='%23ff0' stroke='%23000' stroke-width='.75'/%3E%3Ccircle cx='19' cy='11.5' r='4' fill='%23ff0' stroke='%23000' stroke-width='.75'/%3E%3Ccircle cx='14.5' cy='19.5' r='4' fill='%23ff0' stroke='%23000' stroke-width='.75'/%3E%3C/svg%3E";
 
 var RealColorsControl = function() {};
 RealColorsControl.prototype.onAdd = function(map) {
