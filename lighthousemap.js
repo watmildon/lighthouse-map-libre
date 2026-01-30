@@ -51,6 +51,59 @@ function updateHash() {
 	history.replaceState(null, '', hash);
 }
 
+// --- Starfield ---
+var starfieldCanvas = document.getElementById('starfield');
+var starfieldCtx = starfieldCanvas.getContext('2d');
+var stars = [];
+
+function initStarfield() {
+	// Generate stars once with fixed random positions (in 0-1 normalized coords)
+	var rng = 1;  // simple seeded pseudo-random for consistency
+	function rand() {
+		rng = (rng * 16807 + 0) % 2147483647;
+		return rng / 2147483647;
+	}
+	stars = [];
+	for (var i = 0; i < 800; i++) {
+		stars.push({
+			x: rand(),
+			y: rand(),
+			r: rand() * 1.2 + 0.3,          // radius: 0.3 - 1.5px
+			brightness: rand() * 0.4 + 0.1   // alpha: 0.1 - 0.5 (subtle)
+		});
+	}
+}
+
+function drawStarfield() {
+	var dpr = window.devicePixelRatio || 1;
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	starfieldCanvas.width = w * dpr;
+	starfieldCanvas.height = h * dpr;
+	starfieldCanvas.style.width = w + 'px';
+	starfieldCanvas.style.height = h + 'px';
+	starfieldCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+	// Background
+	starfieldCtx.fillStyle = '#000010';
+	starfieldCtx.fillRect(0, 0, w, h);
+
+	// Stars
+	for (var i = 0; i < stars.length; i++) {
+		var s = stars[i];
+		starfieldCtx.globalAlpha = s.brightness;
+		starfieldCtx.fillStyle = '#ffffff';
+		starfieldCtx.beginPath();
+		starfieldCtx.arc(s.x * w, s.y * h, s.r, 0, 6.2832);
+		starfieldCtx.fill();
+	}
+	starfieldCtx.globalAlpha = 1.0;
+}
+
+initStarfield();
+drawStarfield();
+window.addEventListener('resize', drawStarfield);
+
 // --- Map initialization ---
 var initialView = parseHash();
 var map = new maplibregl.Map({
@@ -71,12 +124,12 @@ map.on('style.load', function() {
 	map.setProjection({ type: 'globe' });
 	map.setSky({
 		'sky-color': '#000010',
-		'sky-horizon-blend': 0.5,
-		'horizon-color': '#000020',
-		'horizon-fog-blend': 0.8,
+		'sky-horizon-blend': 0.0,
+		'horizon-color': '#000010',
+		'horizon-fog-blend': 0.0,
 		'fog-color': '#000010',
-		'fog-ground-blend': 1.0,
-		'atmosphere-blend': ['interpolate', ['linear'], ['zoom'], 0, 1, 12, 0]
+		'fog-ground-blend': 0.0,
+		'atmosphere-blend': ['interpolate', ['linear'], ['zoom'], 0, 0.85, 12, 0]
 	});
 });
 
