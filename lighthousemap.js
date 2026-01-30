@@ -450,6 +450,23 @@ RealColorsControl.prototype.onRemove = function() {
 
 map.addControl(new RealColorsControl(), 'top-left');
 
+// --- Photosensitivity warning ---
+function showWarningIfNeeded(onReady) {
+	if (localStorage.getItem('photosensitivity-acknowledged')) {
+		onReady();
+		return;
+	}
+
+	var overlay = document.getElementById('photosensitivity-warning');
+	overlay.style.display = '';
+
+	document.getElementById('warning-dismiss').addEventListener('click', function() {
+		localStorage.setItem('photosensitivity-acknowledged', '1');
+		overlay.remove();
+		onReady();
+	});
+}
+
 // --- Initialization ---
 map.on('load', function() {
 	setupCanvasOverlay();
@@ -457,7 +474,7 @@ map.on('load', function() {
 	loadData()
 		.then(function() {
 			buildSpatialIndex();
-			startAnimation();
+			showWarningIfNeeded(startAnimation);
 		})
 		.catch(function(err) {
 			console.error('Failed to load lighthouse data:', err);
