@@ -540,3 +540,11 @@ map.on('resize', function() {
 
 map.on('moveend', updateHash);
 map.on('zoomend', updateHash);
+
+// Respond to URL hash changes (manual edits, back/forward navigation).
+// history.replaceState (used by updateHash) does not fire hashchange,
+// so this only triggers on user-initiated hash changes — no feedback loop.
+window.addEventListener('hashchange', function() {
+	var parsed = parseHash();
+	map.jumpTo({ center: parsed.center, zoom: parsed.zoom });
+});
