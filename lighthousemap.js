@@ -335,8 +335,8 @@ function getRadius(range) {
 }
 
 function startAnimation() {
-	function draw(timestamp) {
-		var t = timestamp / 1000;
+	function draw() {
+		var t = performance.now() / 1000;
 		var dpr = window.devicePixelRatio || 1;
 		var width = overlayCanvas.width / dpr;
 		var height = overlayCanvas.height / dpr;
@@ -386,10 +386,13 @@ function startAnimation() {
 
 		overlayCtx.globalAlpha = 1.0;
 
-		requestAnimationFrame(draw);
+		// Request another MapLibre render to keep the animation running
+		map.triggerRepaint();
 	}
 
-	requestAnimationFrame(draw);
+	// Draw in sync with MapLibre's render cycle instead of a separate rAF loop
+	map.on('render', draw);
+	map.triggerRepaint();
 }
 
 // --- Click interaction ---
