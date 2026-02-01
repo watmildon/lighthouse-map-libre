@@ -111,7 +111,10 @@ var map = new maplibregl.Map({
 	style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
 	center: initialView.center,
 	zoom: initialView.zoom,
-	attributionControl: false
+	attributionControl: false,
+	dragRotate: false,
+	pitchWithRotate: false,
+	touchPitch: false
 });
 
 map.addControl(new maplibregl.AttributionControl());
