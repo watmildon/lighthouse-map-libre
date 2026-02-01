@@ -528,6 +528,13 @@ function showWarningIfNeeded(onReady) {
 
 // --- Initialization ---
 map.on('load', function() {
+	// Append GitHub link into the existing attribution control
+	var attrEl = document.querySelector('.maplibregl-ctrl-attrib-inner');
+	if (attrEl) {
+		attrEl.insertAdjacentHTML('beforeend',
+			' | <a href="https://github.com/watmildon/lighthousemap" target="_blank">GitHub</a>');
+	}
+
 	setupCanvasOverlay();
 
 	loadData()
