@@ -1,7 +1,7 @@
+<video src="https://github.com/user-attachments/assets/5d5eceb5-f704-4886-b468-f7db526ce840" autoplay loop muted playsinline controls></video>
+
 # Lighthouse Map Libre
 An interactive globe showing ~26,000 animated maritime light sequences from [OpenStreetMap](https://www.openstreetmap.org/), rendered with [MapLibre GL JS](https://maplibre.org/) v5.
-
-<video src="demo-WA.mp4" autoplay loop muted playsinline></video>
 
 It parses `seamark:*` tags from OSM data — including sequence, character, period, colour, and range — and animates them as coloured circles on a Canvas 2D overlay. Lights without an explicit sequence are synthesized from their character type and period.
 
