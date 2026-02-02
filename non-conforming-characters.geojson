@@ -6,6 +6,204 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          17.990716501,
+          40.657756547
+        ]
+      },
+      "properties": {
+        "id": 148827594,
+        "character": "FI",
+        "name": "Le Pedagne",
+        "sequence": "0.5+(1),0.5+(4)",
+        "period": "6",
+        "group": "2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.260920503,
+          58.515586343
+        ]
+      },
+      "properties": {
+        "id": 205823796,
+        "character": "FI",
+        "name": "Taigh-solais Rubha Robhanais",
+        "sequence": "0.2+(4.8)",
+        "period": "5",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.149732858,
+          41.952639317
+        ]
+      },
+      "properties": {
+        "id": 258806147,
+        "character": "LFl W 10s",
+        "name": null,
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.225663465,
+          48.424586815
+        ]
+      },
+      "properties": {
+        "id": 258991733,
+        "character": "fl",
+        "name": "Discovery Island Lighthouse",
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.3687998,
+          43.8389524
+        ]
+      },
+      "properties": {
+        "id": 353892575,
+        "character": "oc",
+        "name": null,
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.4713199,
+          43.7909364
+        ]
+      },
+      "properties": {
+        "id": 353893142,
+        "character": "oc",
+        "name": null,
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.5522857,
+          44.0293329
+        ]
+      },
+      "properties": {
+        "id": 353893396,
+        "character": "f",
+        "name": null,
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.700680135,
+          -34.029018333
+        ]
+      },
+      "properties": {
+        "id": 582360679,
+        "character": "LFI",
+        "name": "Cape Recife",
+        "sequence": "2.8+(27),2.8+(27),2.8+(54.6)",
+        "period": "29",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.093722095,
+          69.732228628
+        ]
+      },
+      "properties": {
+        "id": 696260163,
+        "character": "AlFl",
+        "name": "Цыпнаволокский",
+        "sequence": "0.1+(1.8)+0.1+(6)+0.1+(1.8)+0.1+(6)",
+        "period": "16",
+        "group": "2+2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.506003469,
+          43.836996054
+        ]
+      },
+      "properties": {
+        "id": 937860830,
+        "character": "flashing",
+        "name": "Pemaquid Point Light",
+        "sequence": "1",
+        "period": "6",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -38.532916321,
+          -13.010324502
+        ]
+      },
+      "properties": {
+        "id": 1250036362,
+        "character": "Al.Iso",
+        "name": "Farol da Barra;Farol Da Barra",
+        "sequence": null,
+        "period": "30",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -4.3204967,
           48.0965205
         ]
@@ -17,6 +215,24 @@
         "sequence": "3+(1)",
         "period": "12",
         "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1495892,
+          41.9526284
+        ]
+      },
+      "properties": {
+        "id": 1431352606,
+        "character": "Fl.(3)W",
+        "name": "Rt Mendre",
+        "sequence": null,
+        "period": "10",
+        "group": "3"
       }
     },
     {
@@ -42,6 +258,60 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          17.1029072,
+          58.7372741
+        ]
+      },
+      "properties": {
+        "id": 2153785316,
+        "character": "Al.Iso",
+        "name": null,
+        "sequence": null,
+        "period": "3",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.455931,
+          48.37468
+        ]
+      },
+      "properties": {
+        "id": 2684703833,
+        "character": "Q + LFl",
+        "name": "FORME 3",
+        "sequence": null,
+        "period": "15",
+        "group": "6"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -63.0489027,
+          18.0080975
+        ]
+      },
+      "properties": {
+        "id": 3568204596,
+        "character": "Fl+LFl",
+        "name": null,
+        "sequence": null,
+        "period": "10",
+        "group": "6"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.215641,
           48.0195219
         ]
@@ -60,322 +330,70 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          100.3149712,
-          5.4578305
+          -84.967706,
+          29.629667
         ]
       },
       "properties": {
-        "id": 6052260993,
-        "character": "LFL",
+        "id": 4748150321,
+        "character": "FIso",
+        "name": "Saint George Island Range Rear Light",
+        "sequence": null,
+        "period": "6",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.139333,
+          61.0562619
+        ]
+      },
+      "properties": {
+        "id": 5372614907,
+        "character": "flashing",
         "name": null,
-        "sequence": "3+(7)",
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2597249,
+          47.755865
+        ]
+      },
+      "properties": {
+        "id": 5835113746,
+        "character": "c",
+        "name": null,
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.0793267,
+          45.8964032
+        ]
+      },
+      "properties": {
+        "id": 7046223643,
+        "character": "Al.Iso",
+        "name": "Mys Kril'on (Nishi Notoro Misaki)",
+        "sequence": null,
         "period": "10",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          100.3145929,
-          5.4580214
-        ]
-      },
-      "properties": {
-        "id": 6052261001,
-        "character": "FL",
-        "name": null,
-        "sequence": "1.5+(3.5)",
-        "period": "5",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.1855646,
-          62.8197523
-        ]
-      },
-      "properties": {
-        "id": 7504388467,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.3175212,
-          62.7783696
-        ]
-      },
-      "properties": {
-        "id": 7504388473,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.2364471,
-          62.8009857
-        ]
-      },
-      "properties": {
-        "id": 7504388476,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.1273484,
-          62.8618269
-        ]
-      },
-      "properties": {
-        "id": 7504388481,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.0485364,
-          62.8588591
-        ]
-      },
-      "properties": {
-        "id": 7504388570,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.0096187,
-          62.8403334
-        ]
-      },
-      "properties": {
-        "id": 7504388706,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.0386373,
-          62.8496677
-        ]
-      },
-      "properties": {
-        "id": 7504388708,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.9739303,
-          62.8077078
-        ]
-      },
-      "properties": {
-        "id": 7504388718,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.9829541,
-          62.4177407
-        ]
-      },
-      "properties": {
-        "id": 7504389356,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.9706378,
-          62.3307278
-        ]
-      },
-      "properties": {
-        "id": 7504389396,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.974991,
-          62.2928896
-        ]
-      },
-      "properties": {
-        "id": 7504389436,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.9706424,
-          62.2861113
-        ]
-      },
-      "properties": {
-        "id": 7504389437,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.8670891,
-          62.5024412
-        ]
-      },
-      "properties": {
-        "id": 7504389573,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.9086303,
-          62.4708899
-        ]
-      },
-      "properties": {
-        "id": 7504389597,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.826526,
-          62.5424099
-        ]
-      },
-      "properties": {
-        "id": 7504389769,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.4086362,
-          62.7564241
-        ]
-      },
-      "properties": {
-        "id": 7504390130,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
         "group": null
       }
     },
@@ -402,16 +420,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          24.3605257,
-          61.0869386
+          -79.6135333,
+          9.0149667
         ]
       },
       "properties": {
-        "id": 8628464366,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
+        "id": 8066316170,
+        "character": "green",
+        "name": "Cucaracha Reach Southbound Ldg Lts Front",
+        "sequence": null,
+        "period": null,
         "group": null
       }
     },
@@ -420,16 +438,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.5836845,
-          61.4669399
+          -79.8855092,
+          32.7762756
         ]
       },
       "properties": {
-        "id": 9022838304,
-        "character": "FI",
+        "id": 8600883246,
+        "character": "ISO",
+        "name": "Mount Pleasant Range Rear",
+        "sequence": null,
+        "period": "6",
+        "group": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.376734,
+          43.8001323
+        ]
+      },
+      "properties": {
+        "id": 9017878526,
+        "character": "oc",
         "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
+        "sequence": null,
+        "period": null,
         "group": null
       }
     },
@@ -438,16 +474,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.5648536,
-          61.4872125
+          -88.554433,
+          44.0283182
         ]
       },
       "properties": {
-        "id": 9022838314,
-        "character": "FI",
+        "id": 9017958065,
+        "character": "floodlight",
         "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
+        "sequence": null,
+        "period": null,
         "group": null
       }
     },
@@ -456,160 +492,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.5503273,
-          61.3207995
+          -80.0807464,
+          26.2591689
         ]
       },
       "properties": {
-        "id": 9170035643,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7026975,
-          61.7364951
-        ]
-      },
-      "properties": {
-        "id": 9203080213,
-        "character": "FI",
-        "name": "Vinttiluoto",
-        "sequence": "0.15+(2.85)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.1064195,
-          61.1576259
-        ]
-      },
-      "properties": {
-        "id": 9205706459,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.6678582,
-          62.0847818
-        ]
-      },
-      "properties": {
-        "id": 9206214200,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.6743991,
-          62.1958952
-        ]
-      },
-      "properties": {
-        "id": 9206214201,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.6671911,
-          62.0622175
-        ]
-      },
-      "properties": {
-        "id": 9206219860,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.6733714,
-          62.1055908
-        ]
-      },
-      "properties": {
-        "id": 9206219874,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.6669677,
-          62.1628523
-        ]
-      },
-      "properties": {
-        "id": 9206219941,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.6839413,
-          62.2177924
-        ]
-      },
-      "properties": {
-        "id": 9206716252,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
+        "id": 9141453841,
+        "character": "Fl(2)",
+        "name": "Hillsboro Inlet Light",
+        "sequence": null,
+        "period": "20",
         "group": null
       }
     },
@@ -690,42 +582,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          30.0448947,
-          62.9834437
-        ]
-      },
-      "properties": {
-        "id": 9216844483,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          30.0589811,
-          62.9664237
-        ]
-      },
-      "properties": {
-        "id": 9216844489,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           29.9829394,
           63.0948745
         ]
@@ -735,24 +591,6 @@
         "character": "FI",
         "name": "Akkasaari",
         "sequence": "0.15+(2.85)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          29.9919988,
-          63.3086003
-        ]
-      },
-      "properties": {
-        "id": 9216844509,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
         "period": "3",
         "group": null
       }
@@ -780,42 +618,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          29.2077152,
-          63.4811291
-        ]
-      },
-      "properties": {
-        "id": 9216844663,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.5027954,
-          63.1269964
-        ]
-      },
-      "properties": {
-        "id": 9217624796,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           26.6013965,
           63.0154899
         ]
@@ -825,150 +627,6 @@
         "character": "FI",
         "name": "Ahti",
         "sequence": "0.2+(2.8)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.6124705,
-          63.0404857
-        ]
-      },
-      "properties": {
-        "id": 9217637245,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.5501126,
-          63.1405114
-        ]
-      },
-      "properties": {
-        "id": 9217637254,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.455318,
-          63.1158614
-        ]
-      },
-      "properties": {
-        "id": 9217637377,
-        "character": "FI",
-        "name": "Kuivakanta ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.9084634,
-          62.741592
-        ]
-      },
-      "properties": {
-        "id": 9217682122,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.8097251,
-          62.8535334
-        ]
-      },
-      "properties": {
-        "id": 9217682326,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7560755,
-          62.9260571
-        ]
-      },
-      "properties": {
-        "id": 9217682491,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.7910715,
-          62.9383803
-        ]
-      },
-      "properties": {
-        "id": 9217682502,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.4336356,
-          62.7641666
-        ]
-      },
-      "properties": {
-        "id": 9219477576,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
         "period": "3",
         "group": null
       }
@@ -996,24 +654,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.4183679,
-          62.752924
-        ]
-      },
-      "properties": {
-        "id": 9220473852,
-        "character": "FI",
-        "name": "Neituri ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           25.973932,
           62.8260444
         ]
@@ -1024,186 +664,6 @@
         "name": "Pahittu",
         "sequence": "0.5+(2.5)",
         "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.931077,
-          63.005731
-        ]
-      },
-      "properties": {
-        "id": 9220488054,
-        "character": "FI",
-        "name": "Märätsalo ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.0933005,
-          62.8788386
-        ]
-      },
-      "properties": {
-        "id": 9220488068,
-        "character": "FI",
-        "name": "Äänisensaari P ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.9408282,
-          62.76158
-        ]
-      },
-      "properties": {
-        "id": 9220488080,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.0770498,
-          62.8678828
-        ]
-      },
-      "properties": {
-        "id": 9220488153,
-        "character": "FI",
-        "name": "Listonniemi ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.9578627,
-          62.8147744
-        ]
-      },
-      "properties": {
-        "id": 9220488185,
-        "character": "FI",
-        "name": "Pahitun ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.1732781,
-          62.81785
-        ]
-      },
-      "properties": {
-        "id": 9220488259,
-        "character": "FI",
-        "name": "Kantianniemi ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.8753912,
-          63.0349525
-        ]
-      },
-      "properties": {
-        "id": 9220488278,
-        "character": "FI",
-        "name": "Murtosaari ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.08358,
-          62.8823266
-        ]
-      },
-      "properties": {
-        "id": 9220488407,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.8930579,
-          63.0189661
-        ]
-      },
-      "properties": {
-        "id": 9220488422,
-        "character": "FI",
-        "name": "Keitaanniemi ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.835198,
-          63.0293253
-        ]
-      },
-      "properties": {
-        "id": 9220488605,
-        "character": "FI",
-        "name": "Paalinsalmi ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
         "group": null
       }
     },
@@ -1230,60 +690,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.8093969,
-          62.5963125
-        ]
-      },
-      "properties": {
-        "id": 9220494816,
-        "character": "FI",
-        "name": "Korpisaari ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.7995155,
-          62.5755839
-        ]
-      },
-      "properties": {
-        "id": 9220517795,
-        "character": "FI",
-        "name": "Paatela ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.772676,
-          62.6469033
-        ]
-      },
-      "properties": {
-        "id": 9220517873,
-        "character": "FI",
-        "name": null,
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           25.7849553,
           62.1321027
         ]
@@ -1294,24 +700,6 @@
         "name": "Muuratsalo",
         "sequence": "1+(2)",
         "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.8377511,
-          62.1896311
-        ]
-      },
-      "properties": {
-        "id": 9222326901,
-        "character": "FI",
-        "name": "Iso-Holsti ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
         "group": null
       }
     },
@@ -1356,42 +744,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.7858017,
-          62.0264876
-        ]
-      },
-      "properties": {
-        "id": 9223047558,
-        "character": "FI",
-        "name": "Rutaniemi ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.6014609,
-          61.4660935
-        ]
-      },
-      "properties": {
-        "id": 9225904852,
-        "character": "FI",
-        "name": "Kattilasaari ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           25.4130678,
           61.5565949
         ]
@@ -1428,24 +780,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.5958816,
-          61.4709343
-        ]
-      },
-      "properties": {
-        "id": 9225924737,
-        "character": "FI",
-        "name": "Pirttisaari ylempi",
-        "sequence": "2+(6)",
-        "period": "8",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           25.5202628,
           61.2652006
         ]
@@ -1456,6 +790,222 @@
         "name": "Pulkkila",
         "sequence": "1+(2)",
         "period": "3",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.4283511,
+          17.3154712
+        ]
+      },
+      "properties": {
+        "id": 9427782662,
+        "character": "Lfl",
+        "name": "Apatot Lighthouse",
+        "sequence": null,
+        "period": "5",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.304286,
+          47.529169
+        ]
+      },
+      "properties": {
+        "id": 9710854066,
+        "character": "Ro",
+        "name": null,
+        "sequence": null,
+        "period": "4",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.5452299,
+          54.382809
+        ]
+      },
+      "properties": {
+        "id": 9889590531,
+        "character": "flashing",
+        "name": null,
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.5444959,
+          54.3827896
+        ]
+      },
+      "properties": {
+        "id": 9889590532,
+        "character": "flashing",
+        "name": null,
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.61369,
+          49.351877
+        ]
+      },
+      "properties": {
+        "id": 9976244388,
+        "character": "fl",
+        "name": "Grant Narrows West",
+        "sequence": null,
+        "period": "4",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.0927297,
+          -27.2084158
+        ]
+      },
+      "properties": {
+        "id": 10142696678,
+        "character": "Dir",
+        "name": null,
+        "sequence": null,
+        "period": null,
+        "group": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7490605,
+          51.3916212
+        ]
+      },
+      "properties": {
+        "id": 10658010648,
+        "character": "Mo(A)",
+        "name": null,
+        "sequence": null,
+        "period": "15",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.7668083,
+          -21.6598545
+        ]
+      },
+      "properties": {
+        "id": 10947299965,
+        "character": "Fl(4) W 20s",
+        "name": "Saumarez Reefs Lighthouse",
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.9002995,
+          14.2430637
+        ]
+      },
+      "properties": {
+        "id": 10958982692,
+        "character": "Fl W ev 5 sec",
+        "name": "Baliscan Lighthouse",
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          52.8882,
+          25.1520833
+        ]
+      },
+      "properties": {
+        "id": 11925956602,
+        "character": "U",
+        "name": null,
+        "sequence": null,
+        "period": "12",
+        "group": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.6190705,
+          17.7869173
+        ]
+      },
+      "properties": {
+        "id": 12347983974,
+        "character": "FI",
+        "name": "Buck Island Signal Light",
+        "sequence": null,
+        "period": "4",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.1826136,
+          41.472445
+        ]
+      },
+      "properties": {
+        "id": 12561404207,
+        "character": "Fl(2+1)",
+        "name": "Junction Light",
+        "sequence": null,
+        "period": null,
         "group": null
       }
     },
@@ -1536,106 +1086,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          17.990713113333335,
-          40.65776416666667
+          -91.3719464,
+          40.4026604
         ]
       },
       "properties": {
-        "id": 148827594,
-        "character": "FI",
-        "name": "Le Pedagne",
-        "sequence": "0.5+(1),0.5+(4)",
-        "period": "6",
-        "group": "2"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.260918749999999,
-          58.51558615833333
-        ]
-      },
-      "properties": {
-        "id": 205823796,
-        "character": "FI",
-        "name": "Taigh-solais Rubha Robhanais",
-        "sequence": "0.2+(4.8)",
-        "period": "5",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.700678184999997,
-          -34.02901868
-        ]
-      },
-      "properties": {
-        "id": 582360679,
-        "character": "LFI",
-        "name": "Cape Recife",
-        "sequence": "2.8+(27),2.8+(27),2.8+(54.6)",
-        "period": "29",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          33.093722555,
-          69.732227835
-        ]
-      },
-      "properties": {
-        "id": 696260163,
-        "character": "AlFl",
-        "name": "Цыпнаволокский",
-        "sequence": "0.1+(1.8)+0.1+(6)+0.1+(1.8)+0.1+(6)",
-        "period": "16",
-        "group": "2+2"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -69.50600568181818,
-          43.83699485909091
-        ]
-      },
-      "properties": {
-        "id": 937860830,
-        "character": "flashing",
-        "name": "Pemaquid Point Light",
-        "sequence": "1",
-        "period": "6",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.548637135000002,
-          54.18914108
-        ]
-      },
-      "properties": {
-        "id": 1352060866,
-        "character": "LFI",
-        "name": null,
-        "sequence": "2+(7)",
-        "period": "10",
+        "id": 12944620352,
+        "character": "Fl(2)",
+        "name": "Union Electric Company Lights",
+        "sequence": null,
+        "period": "06",
         "group": null
       }
     }
