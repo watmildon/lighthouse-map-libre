@@ -197,6 +197,12 @@ def main():
     else:
         elements = fetch_postpass()
 
+    MIN_ELEMENTS = 10000
+    if len(elements) < MIN_ELEMENTS:
+        print(f"ERROR: Only {len(elements)} elements returned (minimum {MIN_ELEMENTS}). "
+              "Refusing to write output to avoid overwriting good data with a bad fetch.")
+        raise SystemExit(1)
+
     write_output(elements, dst)
 
 

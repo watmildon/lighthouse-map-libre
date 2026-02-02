@@ -6,6 +6,7 @@ Outputs a GeoJSON FeatureCollection to non-conforming-characters.geojson.
 """
 
 import json
+import os
 from collections import Counter
 
 # Valid character values per https://wiki.openstreetmap.org/wiki/Key:seamark:light:character
@@ -55,7 +56,9 @@ def get_coords(element, node_lookup):
     return None
 
 def main():
-    with open(r"c:\Repos\lighthousemap\data-full.json", encoding="utf-8") as f:
+    script_dir = os.path.dirname(__file__) or "."
+    input_path = os.path.join(script_dir, "data-reduced.json")
+    with open(input_path, encoding="utf-8") as f:
         data = json.load(f)
 
     elements = data["elements"]
@@ -111,7 +114,7 @@ def main():
         "features": features,
     }
 
-    out_path = r"c:\Repos\lighthousemap\non-conforming-characters.geojson"
+    out_path = os.path.join(script_dir, "non-conforming-characters.geojson")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(geojson, f, indent=2, ensure_ascii=False)
 
