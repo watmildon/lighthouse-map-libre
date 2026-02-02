@@ -20,6 +20,10 @@ The following `seamark:light:*` tags are used to determine light animations. Tag
 | `seamark:light:group` | Number of flashes per group, or Morse letter for Mo characters |
 | `seamark:light:range` | Nominal range in nautical miles — controls rendered circle size |
 
+## Data Updates
+
+A job runs once a night to refresh the mega file that containes all of the data. If you discover that it hasn't updated in a while, please let me know!
+
 ## Credits
 
 Originally forked from an implemenation by [Geodienst](https://www.geodienst.xyz).
