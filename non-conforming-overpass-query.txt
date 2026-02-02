@@ -1,0 +1,97 @@
+[out:json][timeout:120];
+(
+  // Uppercase I typos — should be "Fl" (lowercase L)
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^FI$"];
+  // Should be "LFl"
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^LFI$"];
+
+  // Lowercase variants — should be capitalized per OSM spec
+  // Should be "Fl"
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^fl$"];
+  // Should be "F"
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^f$"];
+  // Should be "Oc"
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^oc$"];
+  // Unknown — needs manual review
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^c$"];
+
+  // Uppercase variants
+  // Should be "Iso"
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^ISO$"];
+  // Should be "Fl"
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^FL$"];
+  // Should be "Fl", move color/period/range to their own tags
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^FL\\(2\\) R 4S 3M$"];
+
+  // Wrong case — should be "LFl"
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^Lfl$"];
+
+  // English words instead of abbreviations
+  // Should be "Fl"
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^flashing$"];
+  // Not a navigational light character — needs manual review
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^floodlight$"];
+  // Color, not a character — move to seamark:light:colour
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^green$"];
+  // Color, not a character — move to seamark:light:colour
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^red$"];
+  // Color, not a character — move to seamark:light:colour
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^yellow$"];
+
+  // Missing dot in alternating — should be "Al.Fl"
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^AlFl$"];
+  // Missing dot — should be "Al.Q"
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^AlQ$"];
+
+  // Not in wiki spec — possibly "Al.Iso" is intentional but unrecognized
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^Al\\.Iso$"];
+
+  // Period/color/description embedded in character field
+  // Should be "LFl", with colour=white and period=10
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^LFl W 10s$"];
+  // Should be "Fl", with colour=white and period=5
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^Fl W ev 5 sec$"];
+  // Should be "Fl", with group=4, colour=white, period=20
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^Fl\\(4\\) W 20s$"];
+  // Should be "Fl" — "IMH" suffix is unknown, needs review
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^Fl IMH$"];
+
+  // Spurious punctuation or embedded info
+  // Should be "Fl" with group=3, colour=white
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^Fl\\.\\(3\\)W$"];
+  // Should be "Fl" — historical note doesn't belong here
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^Fl_of1923$"];
+  // Ambiguous — possibly "F" + "Iso" (two lights?) or typo; needs review
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^FIso$"];
+
+  // Spaces around + — should be "Q+LFl"
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^Q \\+ LFl$"];
+
+  // Composite characters
+  // Should be "Fl+LFl" (valid composite, but not in wiki spec; needs review)
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^Fl\\+LFl$"];
+  // Group notation in character — should be "Fl" with group="2+1"
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^Fl\\(2\\+1\\)$"];
+
+  // Redundant group count in character field
+  // Should be "Fl" (group=1 is implied)
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^Fl\\(1\\)$"];
+  // Should be "Fl" with group=2
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^Fl\\(2\\)$"];
+
+  // Not a standard light character type
+  // Directional — not a character; move to seamark:light:category=directional
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^Dir$"];
+  // Unknown — possibly rotating? Not a valid OSM value; needs review
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^Ro$"];
+  // Unknown — needs review
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^U$"];
+  // Color, not a character — should be removed or moved to seamark:light:colour=white
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^W$"];
+  // Valid Morse — should be "Mo" with seamark:light:group="A"
+  nwr[~"^seamark:light(:[0-9]+)?:character$"~"^Mo\\(A\\)$"];
+);
+//Editing in JOSM so we need more than just 'out center'
+out body;
+>;
+out skel qt;
