@@ -6,42 +6,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          17.990716501,
-          40.657756547
-        ]
-      },
-      "properties": {
-        "id": 148827594,
-        "character": "FI",
-        "name": "Le Pedagne",
-        "sequence": "0.5+(1),0.5+(4)",
-        "period": "6",
-        "group": "2"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.260920503,
-          58.515586343
-        ]
-      },
-      "properties": {
-        "id": 205823796,
-        "character": "FI",
-        "name": "Taigh-solais Rubha Robhanais",
-        "sequence": "0.2+(4.8)",
-        "period": "5",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           19.149732858,
           41.952639317
         ]
@@ -49,42 +13,6 @@
       "properties": {
         "id": 258806147,
         "character": "LFl W 10s",
-        "name": null,
-        "sequence": null,
-        "period": null,
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -123.225663465,
-          48.424586815
-        ]
-      },
-      "properties": {
-        "id": 258991733,
-        "character": "fl",
-        "name": "Discovery Island Lighthouse",
-        "sequence": null,
-        "period": null,
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -88.3687998,
-          43.8389524
-        ]
-      },
-      "properties": {
-        "id": 353892575,
-        "character": "oc",
         "name": null,
         "sequence": null,
         "period": null,
@@ -193,27 +121,9 @@
       "properties": {
         "id": 1250036362,
         "character": "Al.Iso",
-        "name": "Farol da Barra;Farol Da Barra",
+        "name": "Farol da Barra",
         "sequence": null,
         "period": "30",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.3204967,
-          48.0965205
-        ]
-      },
-      "properties": {
-        "id": 1370801338,
-        "character": "fl",
-        "name": null,
-        "sequence": "3+(1)",
-        "period": "12",
         "group": null
       }
     },
@@ -276,24 +186,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -4.455931,
-          48.37468
-        ]
-      },
-      "properties": {
-        "id": 2684703833,
-        "character": "Q + LFl",
-        "name": "FORME 3",
-        "sequence": null,
-        "period": "15",
-        "group": "6"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -63.0489027,
           18.0080975
         ]
@@ -340,24 +232,6 @@
         "name": "Saint George Island Range Rear Light",
         "sequence": null,
         "period": "6",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          28.139333,
-          61.0562619
-        ]
-      },
-      "properties": {
-        "id": 5372614907,
-        "character": "flashing",
-        "name": null,
-        "sequence": null,
-        "period": null,
         "group": null
       }
     },
@@ -438,24 +312,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.8855092,
-          32.7762756
-        ]
-      },
-      "properties": {
-        "id": 8600883246,
-        "character": "ISO",
-        "name": "Mount Pleasant Range Rear",
-        "sequence": null,
-        "period": "6",
-        "group": "1"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -88.376734,
           43.8001323
         ]
@@ -510,312 +366,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          29.5972039,
-          63.2484703
-        ]
-      },
-      "properties": {
-        "id": 9216844056,
-        "character": "FI",
-        "name": "Uramonsalmi",
-        "sequence": "0.15+(2.85)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          29.9335661,
-          63.2624896
-        ]
-      },
-      "properties": {
-        "id": 9216844140,
-        "character": "FI",
-        "name": "Kinahmonsalmi",
-        "sequence": "0.15+(2.85)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          29.824082,
-          63.2378016
-        ]
-      },
-      "properties": {
-        "id": 9216844341,
-        "character": "FI",
-        "name": "Liklamonsaari",
-        "sequence": "0.15+(2.85)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          29.7488572,
-          63.2840512
-        ]
-      },
-      "properties": {
-        "id": 9216844447,
-        "character": "FI",
-        "name": "Kutkutsaari",
-        "sequence": "0.15+(2.85)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          29.9829394,
-          63.0948745
-        ]
-      },
-      "properties": {
-        "id": 9216844497,
-        "character": "FI",
-        "name": "Akkasaari",
-        "sequence": "0.15+(2.85)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          29.598852,
-          63.3396476
-        ]
-      },
-      "properties": {
-        "id": 9216844589,
-        "character": "FI",
-        "name": "Vaaraniemi",
-        "sequence": "0.15+(2.85)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.6013965,
-          63.0154899
-        ]
-      },
-      "properties": {
-        "id": 9217637244,
-        "character": "FI",
-        "name": "Ahti",
-        "sequence": "0.2+(2.8)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          26.4257524,
-          62.7610073
-        ]
-      },
-      "properties": {
-        "id": 9219477577,
-        "character": "FI",
-        "name": "Neituri itäinen",
-        "sequence": "1+(2)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.973932,
-          62.8260444
-        ]
-      },
-      "properties": {
-        "id": 9220488011,
-        "character": "FI",
-        "name": "Pahittu",
-        "sequence": "0.5+(2.5)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.6384128,
-          63.0847075
-        ]
-      },
-      "properties": {
-        "id": 9220488769,
-        "character": "FI",
-        "name": "Heinsalmi",
-        "sequence": "0.5+(2.5)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.7849553,
-          62.1321027
-        ]
-      },
-      "properties": {
-        "id": 9222326843,
-        "character": "FI",
-        "name": "Muuratsalo",
-        "sequence": "1+(2)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.7684676,
-          62.0362659
-        ]
-      },
-      "properties": {
-        "id": 9223046834,
-        "character": "FI",
-        "name": "Mullikkasaari",
-        "sequence": "0.3+(2.7)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.6101475,
-          61.9765445
-        ]
-      },
-      "properties": {
-        "id": 9223047094,
-        "character": "FI",
-        "name": "Haikka",
-        "sequence": "0.2+(2.8)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.4130678,
-          61.5565949
-        ]
-      },
-      "properties": {
-        "id": 9225924604,
-        "character": "FI",
-        "name": "Tehinsilmä",
-        "sequence": "2+(2)+2+(4)",
-        "period": "10",
-        "group": "2"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.4943932,
-          61.5591392
-        ]
-      },
-      "properties": {
-        "id": 9225924711,
-        "character": "FI",
-        "name": "Vähä Juures",
-        "sequence": "0.2+(2.8)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.5202628,
-          61.2652006
-        ]
-      },
-      "properties": {
-        "id": 9225924778,
-        "character": "FI",
-        "name": "Pulkkila",
-        "sequence": "1+(2)",
-        "period": "3",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          120.4283511,
-          17.3154712
-        ]
-      },
-      "properties": {
-        "id": 9427782662,
-        "character": "Lfl",
-        "name": "Apatot Lighthouse",
-        "sequence": null,
-        "period": "5",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -122.304286,
           47.529169
         ]
@@ -824,60 +374,6 @@
         "id": 9710854066,
         "character": "Ro",
         "name": null,
-        "sequence": null,
-        "period": "4",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          48.5452299,
-          54.382809
-        ]
-      },
-      "properties": {
-        "id": 9889590531,
-        "character": "flashing",
-        "name": null,
-        "sequence": null,
-        "period": null,
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          48.5444959,
-          54.3827896
-        ]
-      },
-      "properties": {
-        "id": 9889590532,
-        "character": "flashing",
-        "name": null,
-        "sequence": null,
-        "period": null,
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.61369,
-          49.351877
-        ]
-      },
-      "properties": {
-        "id": 9976244388,
-        "character": "fl",
-        "name": "Grant Narrows West",
         "sequence": null,
         "period": "4",
         "group": null
@@ -906,24 +402,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0.7490605,
-          51.3916212
-        ]
-      },
-      "properties": {
-        "id": 10658010648,
-        "character": "Mo(A)",
-        "name": null,
-        "sequence": null,
-        "period": "15",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           153.7668083,
           -21.6598545
         ]
@@ -932,24 +410,6 @@
         "id": 10947299965,
         "character": "Fl(4) W 20s",
         "name": "Saumarez Reefs Lighthouse",
-        "sequence": null,
-        "period": null,
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          121.9002995,
-          14.2430637
-        ]
-      },
-      "properties": {
-        "id": 10958982692,
-        "character": "Fl W ev 5 sec",
-        "name": "Baliscan Lighthouse",
         "sequence": null,
         "period": null,
         "group": null
@@ -971,24 +431,6 @@
         "sequence": null,
         "period": "12",
         "group": "1"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.6190705,
-          17.7869173
-        ]
-      },
-      "properties": {
-        "id": 12347983974,
-        "character": "FI",
-        "name": "Buck Island Signal Light",
-        "sequence": null,
-        "period": "4",
-        "group": null
       }
     },
     {
@@ -1043,24 +485,6 @@
         "sequence": "3+(1)",
         "period": "3",
         "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -83.6849312,
-          63.2747456
-        ]
-      },
-      "properties": {
-        "id": 12737088230,
-        "character": "W",
-        "name": "Walrus Island",
-        "sequence": "1+(5)",
-        "period": "6",
-        "group": "1"
       }
     },
     {
