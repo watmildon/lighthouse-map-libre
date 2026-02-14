@@ -504,6 +504,78 @@
         "period": "06",
         "group": null
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.3832625,
+          -24.759093
+        ]
+      },
+      "properties": {
+        "id": 13555565208,
+        "character": "fixed",
+        "name": null,
+        "sequence": null,
+        "period": "0",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.3911965,
+          -24.7543604
+        ]
+      },
+      "properties": {
+        "id": 13555565211,
+        "character": "fixed",
+        "name": null,
+        "sequence": null,
+        "period": "0",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.3914057,
+          -24.7552251
+        ]
+      },
+      "properties": {
+        "id": 13555565212,
+        "character": "fixed",
+        "name": null,
+        "sequence": null,
+        "period": "0",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.379097,
+          -24.7649847
+        ]
+      },
+      "properties": {
+        "id": 13555565215,
+        "character": "fixed",
+        "name": null,
+        "sequence": null,
+        "period": "0",
+        "group": null
+      }
     }
   ]
 }
