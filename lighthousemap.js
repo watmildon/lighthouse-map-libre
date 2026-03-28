@@ -210,7 +210,7 @@ function processElements(elements) {
 		} catch (e) {
 			console.error('Error parsing sequence:', e, el.tags);
 			try {
-				sequence = LightSequence.parse({'seamark:light:sequence': '1+(1)'});
+				sequence = LightSequence.parse({'seamark:light:sequence': '1+(1)', 'seamark:light:colour': el.tags['seamark:light:colour'] || 'white'});
 			} catch (e2) {
 				continue;
 			}
