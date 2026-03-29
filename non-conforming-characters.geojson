@@ -186,6 +186,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          135.9939297,
+          -34.7265788
+        ]
+      },
+      "properties": {
+        "id": 3213913862,
+        "character": "oc",
+        "name": "Cape Donington Lighthouse",
+        "sequence": null,
+        "period": "6",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -63.0489027,
           18.0080975
         ]
