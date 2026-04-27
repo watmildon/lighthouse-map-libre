@@ -276,24 +276,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          15.5102257,
-          43.9038523
-        ]
-      },
-      "properties": {
-        "id": 8032237889,
-        "character": "FL(2) R 4S 3M",
-        "name": "Grafulin",
-        "sequence": "2",
-        "period": "4",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -79.6135333,
           9.0149667
         ]
