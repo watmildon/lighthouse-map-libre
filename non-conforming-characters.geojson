@@ -576,6 +576,24 @@
         "period": "0",
         "group": null
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.0016,
+          58.8285833
+        ]
+      },
+      "properties": {
+        "id": 13769777749,
+        "character": "Q9 15s",
+        "name": "Västergrund",
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
     }
   ]
 }
