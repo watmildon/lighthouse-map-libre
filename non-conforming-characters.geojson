@@ -168,14 +168,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          17.1029072,
-          58.7372741
+          17.1027409,
+          58.7374189
         ]
       },
       "properties": {
         "id": 2153785316,
         "character": "Al.Iso",
-        "name": null,
+        "name": "Sjösa nedre",
         "sequence": null,
         "period": "3",
         "group": null
@@ -590,6 +590,24 @@
         "id": 13769777749,
         "character": "Q9 15s",
         "name": "Västergrund",
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.0949408,
+          58.7422698
+        ]
+      },
+      "properties": {
+        "id": 13892663918,
+        "character": "Al.Q",
+        "name": "Sjösa Norra övre",
         "sequence": null,
         "period": null,
         "group": null
