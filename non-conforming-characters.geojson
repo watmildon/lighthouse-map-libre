@@ -612,6 +612,24 @@
         "period": null,
         "group": null
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.7730376,
+          45.4175117
+        ]
+      },
+      "properties": {
+        "id": 13943270128,
+        "character": "fl",
+        "name": "Calcite Breakwater Light",
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
     }
   ]
 }
