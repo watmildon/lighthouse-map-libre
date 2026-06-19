@@ -630,6 +630,42 @@
         "period": null,
         "group": null
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.3658108,
+          48.2234394
+        ]
+      },
+      "properties": {
+        "id": 13950240627,
+        "character": "flashing",
+        "name": null,
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.4222299,
+          48.1910382
+        ]
+      },
+      "properties": {
+        "id": 13950240628,
+        "character": "flashing",
+        "name": null,
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
     }
   ]
 }
