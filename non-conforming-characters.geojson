@@ -648,6 +648,42 @@
         "period": "2.5",
         "group": null
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8168833,
+          54.2916667
+        ]
+      },
+      "properties": {
+        "id": 14045550508,
+        "character": "fl",
+        "name": "ODAS 147",
+        "sequence": null,
+        "period": "20",
+        "group": "5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7360333,
+          54.50895
+        ]
+      },
+      "properties": {
+        "id": 14045550509,
+        "character": "fl",
+        "name": "ODAS 146",
+        "sequence": null,
+        "period": "20",
+        "group": "5"
+      }
     }
   ]
 }
