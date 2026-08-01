@@ -168,16 +168,34 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          17.1029072,
-          58.7372741
+          17.1027409,
+          58.7374189
         ]
       },
       "properties": {
         "id": 2153785316,
         "character": "Al.Iso",
-        "name": null,
+        "name": "Sjösa nedre",
         "sequence": null,
         "period": "3",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.9939297,
+          -34.7265788
+        ]
+      },
+      "properties": {
+        "id": 3213913862,
+        "character": "oc",
+        "name": "Cape Donington Lighthouse",
+        "sequence": null,
+        "period": "6",
         "group": null
       }
     },
@@ -250,24 +268,6 @@
         "name": "Mys Kril'on (Nishi Notoro Misaki)",
         "sequence": null,
         "period": "10",
-        "group": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.5102257,
-          43.9038523
-        ]
-      },
-      "properties": {
-        "id": 8032237889,
-        "character": "FL(2) R 4S 3M",
-        "name": "Grafulin",
-        "sequence": "2",
-        "period": "4",
         "group": null
       }
     },
@@ -575,6 +575,114 @@
         "sequence": null,
         "period": "0",
         "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.0016,
+          58.8285833
+        ]
+      },
+      "properties": {
+        "id": 13769777749,
+        "character": "Q9 15s",
+        "name": "Västergrund",
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.0949408,
+          58.7422698
+        ]
+      },
+      "properties": {
+        "id": 13892663918,
+        "character": "Al.Q",
+        "name": "Sjösa Norra övre",
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.7730376,
+          45.4175117
+        ]
+      },
+      "properties": {
+        "id": 13943270128,
+        "character": "fl",
+        "name": "Calcite Breakwater Light",
+        "sequence": null,
+        "period": null,
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.4223316,
+          48.1909465
+        ]
+      },
+      "properties": {
+        "id": 13950240628,
+        "character": "flashing",
+        "name": "Blake Point Light",
+        "sequence": null,
+        "period": "2.5",
+        "group": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8168833,
+          54.2916667
+        ]
+      },
+      "properties": {
+        "id": 14045550508,
+        "character": "fl",
+        "name": "ODAS 147",
+        "sequence": null,
+        "period": "20",
+        "group": "5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7360333,
+          54.50895
+        ]
+      },
+      "properties": {
+        "id": 14045550509,
+        "character": "fl",
+        "name": "ODAS 146",
+        "sequence": null,
+        "period": "20",
+        "group": "5"
       }
     }
   ]
