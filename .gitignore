@@ -1,0 +1,60 @@
+# LLM assistant / coding agent files — managed locally, never committed
+
+# Claude Code
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+
+# OpenAI Codex / generic agent instructions
+AGENTS.md
+AGENT.md
+.codex/
+
+# GitHub Copilot
+.github/copilot-instructions.md
+.github/instructions/
+.github/prompts/
+
+# Cursor
+.cursor/
+.cursorrules
+.cursorignore
+.cursorindexingignore
+
+# Windsurf (Codeium)
+.windsurf/
+.windsurfrules
+
+# Aider
+.aider*
+
+# Cline
+.cline/
+.clinerules
+.clinerules/
+
+# Roo Code
+.roo/
+.roorules
+
+# Google Gemini
+GEMINI.md
+.gemini/
+
+# Continue
+.continue/
+
+# Amazon Q / CodeWhisperer
+.amazonq/
+
+# Goose
+.goosehints
+
+# JetBrains AI Assistant
+.aiignore
+
+# Zed / generic rules files
+.rules
+
+# Windows accidental redirect artifact
+nul

@@ -21,7 +21,7 @@ KEEP_EXACT = {"name"}
 
 OUTPUT = "data-reduced.json"
 
-POSTPASS_URL = "https://postpass.geofabrik.de/api/0.2/interpreter"
+POSTPASS_URL = "https://postpass.geofabrik.de/api/interpreter"
 POSTPASS_QUERY = """\
 SELECT
   pp.osm_type,
