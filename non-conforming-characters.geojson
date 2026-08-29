@@ -684,6 +684,24 @@
         "period": "20",
         "group": "5"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -136.3714321,
+          57.9898814
+        ]
+      },
+      "properties": {
+        "id": 14132077754,
+        "character": "fl",
+        "name": "Lisianski Strait Light 6",
+        "sequence": null,
+        "period": "2.5",
+        "group": null
+      }
     }
   ]
 }
