@@ -702,6 +702,24 @@
         "period": "2.5",
         "group": null
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.9197196,
+          8.4766289
+        ]
+      },
+      "properties": {
+        "id": 14174839502,
+        "character": "Al.F",
+        "name": "Trivandrum AVIATION LIGHT",
+        "sequence": null,
+        "period": "4",
+        "group": null
+      }
     }
   ]
 }
